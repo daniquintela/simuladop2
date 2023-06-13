@@ -1,17 +1,21 @@
 //1. Verificar se o número é primo
 function numeroPrimo(number){
-    number.parseInt(prompt('Digite um número'))
-    if (number = 1){
-        return false
+    var number = parseInt(prompt('Digite um número'))
+
+    
+    if (number <= 1){
+        return "Não é um número primo"
     }
 
-    for (var i = 2; i <= Math.sqrt(number); i++){
-        if (number % i == 0){
-            return false
+    for (let i = 2; i <= Math.sqrt(number); i++){
+        if (number % i === 0){
+            return "Não é um numero primo"
         }
     }
-    return true
+  return "É um número primo"
 }
+
+console.log(numeroPrimo())
 
 
 
